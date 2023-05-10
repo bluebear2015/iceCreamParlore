@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<!-- NOTE we need a page that has clickable options for customizing what kind of ice cream, topping, 
+    and cone the user wants cataloging the items and total on screen with an option to checkout and clear the cart -->
+
+<body class="debug">
+
+    <header class="row">
+        <nav class="dispaly-1 bg-info text-center d-flex justify-content-center">
+            <H1 class="p-2 iceCreamFont text-dark box-shade bg-warning">🍦IceCream!!🍧</H1>
+        </nav>
+    </header>
+
+    <main class="container-fluid hero-image image-fluid">
+        <!-- SECTION we need a card to hold name, qty, price, total.
+        also need buttons for custimizing the cone -->
+        
+        <section class="col-12">
+            <div class="row">
+    <div class="cardHead bg-secondary d-flex justify-content-between box-shade">
+                <h4 class="text-dark p-2 m-1">name: <span id="iceScreen"></span></h4>
+<h4 class="text-dark p-2 m-1">Qty: <span id="iceScreen2"></span></h4>
+<h4 class="text-dark p-2 m-1">Cones: <span id="coneScreen"></span></h4>
+<h4 class="text-dark p-2 m-1">Total: <span id="iceScreen4"></span></h4>
+
+    </div>
+    <!-- <div class=" cdWidth"> -->
+<!-- <div class="row box-shade bg-warning text-center text-dark iceCreamFont m-5" > -->
+<!-- <h1 id="iceScreen"></h1> -->
+<!-- </div>   -->
+    <!-- </div> -->
+    <!-- <div class=" cdWidth"> -->
+        <!-- <div class="row box-shade bg-warning text-center text-dark iceCreamFont m-5" > -->
+        <!-- <h1 id="iceScreen2"></h1> -->
+        <!-- </div>   -->
+
+<!-- </div> -->
+
+<!-- ice cream selections -->
+    <div class="m-2 p-2">
+        <div class="m-3 p-3 box-shade bg-warning d-flex-inline">
+<button  onclick="buyToppings('Chocolate Chips')" class="box-shade1 text-dark p-2 text-center"><h3> CHOCOLATE CHIPS</h3></button>
+<button  onclick="buyToppings('Sprinkles')" class="box-shade1 text-dark p-2 text-center"><h3> SPRINKLES </h3></button>
+</div>
+<div class="m-3 p-3 box-shade bg-warning d-flex-inline">
+<button  onclick="buyCones('Waffle Bowl')" class="box-shade1 text-dark p-2 text-center"><h3> WAFFLE BOWL</h3></button>
+<button  onclick="buyCones('Waffle Cone')" class="box-shade1 text-dark p-2 text-center"><h3> WAFFLE CONE</h3></button>
+</div>
+
+<div class="m-3 p-3 box-shade bg-warning d-flex-inline">
+<button onclick="buyIceCream('Cookie Dough')" class="box-shade1 text-dark p-2 text-center"><h3> COOKIE DOUGH</h3></button>
+<button onclick="buyIceCream('Vanilla')" class="box-shade1 text-dark p-2 text-center"><h3> VANILLA </h3></button>
+<button onclick="buyIceCream('Strawberry')" class="box-shade1 text-dark p-2 text-center"><h3> STRAWBERRY </h3></button>
+</div>
+</div>
+            
+
+
+        </section>
+    </main>
+
+    <footer class="col-12 bg-info dispaly-1">
+        <h1 class="text-center iceCreamFont text-dark"> 2023 CodeWorks Late Spring</h1>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
